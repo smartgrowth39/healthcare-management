@@ -2,7 +2,7 @@
 include("../connect.php");
 session_start();
 
-if (!isset($_SESSION["admin_email"])) {
+if (isset($_SESSION["admin_email"])) {
     header("Location: dashboard.php");
     exit();
 }

@@ -6,11 +6,19 @@ include 'includes/head.php';
 ?>
 <?php
 session_start();
-// Agar already login ho chuka ho
+// Agar already login ho chuka ho — role ke hisaab se sahi dashboard par bhejo
 if (isset($_SESSION["user_email"])) {
-  header("Location: patient_panel/dashboard.php");
+  $role = $_SESSION['role'] ?? '';
+  if ($role === 'patient') {
+    header("Location: patient_panel/dashboard.php");
+  } elseif ($role === 'doctor') {
+    header("Location: doctor_final/doctor_output/dashboard.php");
+  } else {
+    header("Location: index.php");
+  }
   exit();
 }
+
 include "connect.php";
 
 $error = "";

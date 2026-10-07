@@ -66,7 +66,7 @@ $pageTitle = isset($pageTitle) ? $pageTitle : 'Dashboard';
     <div class="navbar-admin dropdown" data-bs-toggle="dropdown" role="button">
         <div class="navbar-admin-avatar">A</div>
         <div class="navbar-admin-info d-none d-md-block">
-            <div class="name">Abdul samad</div>
+            <div class="name">Muhammad Shayan</div>
             <div class="role"><?=$_SESSION['admin_email']?></div>
         </div>
         <iz class="bi bi-chevron-down ms-1" style="font-size:11px;color:#7f8fa6;"></iz>

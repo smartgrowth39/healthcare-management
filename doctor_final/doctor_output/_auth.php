@@ -8,9 +8,9 @@ if (session_status() === PHP_SESSION_NONE) {
     ]);
     session_start();
 }
-require_once __DIR__ . '../connect.php';
+require_once __DIR__ . '/../../connect.php';
 if (!isset($_SESSION['user_id']) || ($_SESSION['role'] ?? null) !== 'doctor') {
-    header('Location: ../login.php');
+    header('Location: ../../login.php');
     exit;
 }
 function doctor_id(): int {
